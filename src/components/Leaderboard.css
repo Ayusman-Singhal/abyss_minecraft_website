@@ -1,0 +1,179 @@
+.leaderboard-section {
+    background-image: var(--texture-rust);
+    background-size: var(--texture-size-rust);
+    background-repeat: var(--texture-repeat-rust);
+    background-position: var(--texture-position-rust);
+    position: relative;
+}
+
+.leaderboard-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.88);
+}
+
+.leaderboard-section .section-container {
+    position: relative;
+    z-index: 1;
+}
+
+.leaderboard-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.discord-panel {
+    padding: 40px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discord-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.discord-icon-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(114, 137, 218, 0.4));
+}
+
+.discord-heading {
+    font-size: var(--fs-lg);
+    letter-spacing: 3px;
+}
+
+.discord-title {
+    font-size: var(--fs-2xl);
+    color: #7289da;
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 20px rgba(114, 137, 218, 0.5);
+}
+
+.discord-desc {
+    font-size: var(--fs-md);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    text-shadow: 1px 1px 3px #000;
+    max-width: 320px;
+}
+
+.discord-btn {
+    margin-top: 8px;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-size: var(--fs-md);
+}
+
+.leaderboard-panel {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leaderboard-title {
+    text-align: center;
+    font-size: var(--fs-lg);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid rgba(255, 100, 0, 0.15);
+}
+
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.leaderboard-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    transition: all var(--transition-normal);
+}
+
+.leaderboard-row:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px rgba(255, 60, 0, 0.2);
+}
+
+.lb-rank {
+    font-size: var(--fs-md);
+    color: var(--gold);
+    min-width: 36px;
+}
+
+.lb-avatar {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #5a3a1a;
+    image-rendering: pixelated;
+    background: #222;
+}
+
+.lb-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.lb-name {
+    font-size: var(--fs-md);
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.lb-rank-tag {
+    font-size: var(--fs-xs);
+    color: var(--orange);
+    letter-spacing: 1px;
+}
+
+.lb-kills {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lb-kills-icon {
+    font-size: var(--fs-base);
+}
+
+.lb-kills-count {
+    color: var(--gold-light);
+    font-size: var(--fs-md);
+}
+
+.leaderboard-view-btn {
+    margin-top: 16px;
+    width: 100%;
+    text-align: center;
+    font-size: var(--fs-sm);
+    padding: 14px;
+}
+
+@media (max-width: 768px) {
+    .leaderboard-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .discord-panel {
+        padding: 36px 20px;
+    }
+
+    .discord-title {
+        font-size: 1.6rem;
+    }
+}

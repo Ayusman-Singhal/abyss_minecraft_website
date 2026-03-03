@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import './styles/variables.css';
+
+/* ============================================
+   MINECRAFT DARK FANTASY - DESIGN SYSTEM
+   All tokens come from variables.css
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-abyss);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ============================================
+   FONTS
+   ============================================ */
+.mc-font {
+  font-family: var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow:
+    3px 3px 0px #000,
+    -1px -1px 0px #000,
+    1px -1px 0px #000,
+    -1px 1px 0px #000;
+}
+
+.cinzel {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.mc-gold {
+  color: var(--gold-light);
+  text-shadow:
+    3px 3px 0px #000,
+    4px 4px 0px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(240, 192, 64, 0.3);
+}
+
+/* ============================================
+   STONE PANEL — CSS border-image 9-slice
+   ============================================ */
+.stone-panel {
+  background-image: var(--texture-rust);
+  background-size: var(--texture-size-rust);
+  background-repeat: var(--texture-repeat-rust);
+  background-position: var(--texture-position-rust);
+  border-width: var(--border-panel);
+  border-image-source: var(--border-image-src);
+  border-image-slice: var(--border-slice);
+  border-image-width: var(--border-panel);
+  border-image-outset: var(--border-outset);
+  border-image-repeat: var(--border-mode);
+  border-radius: 0;
+  position: relative;
+  box-shadow: var(--shadow-panel);
+}
+
+/* ============================================
+   MINECRAFT BUTTON — CSS border-image 9-slice
+   ============================================ */
+.mc-button {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--fs-md);
+  text-transform: uppercase;
+  color: var(--gold-light);
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  transition: all var(--transition-fast);
+  background: var(--texture-button) center / 100% 100% no-repeat;
+  border-image-source: var(--border-image-src);
+  border-image-slice: var(--border-slice);
+  border-image-width: var(--border-button);
+  border-image-outset: var(--border-outset);
+  border-image-repeat: var(--border-mode);
+  text-shadow: 2px 2px 0px #000, 0 0 8px rgba(0, 0, 0, 0.8);
+  border-radius: 0;
+  letter-spacing: 2px;
+}
+
+.mc-button:hover {
+  filter: brightness(1.25);
+}
+
+.mc-button:active {
+  filter: brightness(0.85);
+  transform: translateY(2px);
+}
+
+/* Play Now button — uses playnow.png (text baked in) */
+.mc-button-play {
+  background: url('/images/playnow.png') center / 100% 100% no-repeat;
+  border: none;
+  border-image: none;
+  padding: 30px 120px;
+  font-size: 0;
+  color: transparent;
+  text-shadow: none;
+  box-shadow: var(--shadow-lava);
+}
+
+.mc-button-play:hover {
+  filter: none;
+  color: transparent;
+  box-shadow: var(--shadow-lava);
+  transform: none;
+}
+
+/* Red button variant */
+.mc-button-red {
+  color: #ffcccc;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+}
+
+.mc-button-red:hover {
+  filter: brightness(1.3);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+/* ============================================
+   LAVA DIVIDER
+   ============================================ */
+.lava-divider {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      var(--red-dark) 15%,
+      var(--red-glow) 50%,
+      var(--red-dark) 85%,
+      transparent 100%);
+  box-shadow: 0 0 15px var(--lava-glow), 0 0 30px rgba(255, 60, 0, 0.2);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(85, 255, 85, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(85, 255, 85, 0.8);
+  }
+}
+
+@keyframes ember-rise {
+  0% {
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a2a1a;
+  border: 1px solid #6a4a30;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a3a1a;
+}
+
+/* ============================================
+   UTILITY
+   ============================================ */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: var(--fs-2xl);
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 50px 16px;
+  }
+
+  .section-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .mc-button {
+    font-size: var(--fs-sm);
+    padding: 12px 24px;
+  }
+
+  .mc-button-play {
+    padding: 24px 80px;
+  }
+}

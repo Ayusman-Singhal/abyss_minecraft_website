@@ -1,0 +1,135 @@
+/* Navbar — fully transparent, floats over hero */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: background 0.3s, backdrop-filter 0.3s;
+}
+
+/* Subtle gradient so text remains readable against any background */
+.navbar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    text-decoration: none;
+    letter-spacing: 6px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 10px 18px;
+    transition: all 0.2s;
+    letter-spacing: 2px;
+    text-shadow:
+        2px 2px 0px #000,
+        0 0 6px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gold-light);
+    box-shadow: 0 0 8px rgba(240, 192, 64, 0.5);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 70%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold-light);
+    text-shadow:
+        2px 2px 0px #000,
+        0 0 15px rgba(240, 192, 64, 0.6);
+}
+
+.nav-login-img {
+    height: 38px;
+    cursor: pointer;
+    margin-left: 14px;
+    transition: all 0.2s;
+}
+
+.nav-login-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    cursor: pointer;
+    text-shadow: 2px 2px 0px #000;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid rgba(255, 100, 0, 0.2);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-login-img {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}

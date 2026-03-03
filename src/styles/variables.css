@@ -1,0 +1,126 @@
+/* ============================================
+   GLOBAL DESIGN TOKENS
+   Central control for the entire site.
+   Change values here → reflected everywhere.
+   ============================================ */
+
+:root {
+    /* ── Backgrounds ── */
+    --bg-abyss: #0a0a0a;
+    --bg-void: #111111;
+    --bg-stone: #3c3c3c;
+    --bg-stone-light: #4a4a4a;
+    --bg-stone-dark: #2a2a2a;
+    --bg-card: #1a1210;
+
+    /* ── Accent Reds ── */
+    --red-glow: #ff2a2a;
+    --red-primary: #cc0000;
+    --red-dark: #b30000;
+    --red-blood: #8b0000;
+    --red-dim: #3a0000;
+
+    /* ── Gold / Orange ── */
+    --gold: #d4a017;
+    --gold-light: #f0c040;
+    --gold-dark: #a07810;
+    --orange: #e8711a;
+
+    /* ── Text ── */
+    --text-primary: #e8e0d4;
+    --text-secondary: #b0a090;
+    --text-dim: #666;
+
+    /* ── Special Effects ── */
+    --lava-glow: rgba(255, 60, 0, 0.6);
+    --red-glow-soft: rgba(255, 0, 0, 0.15);
+    --green-online: #55ff55;
+
+    /* ── Fonts ── */
+    --font-pixel: 'Press Start 2P', cursive;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-weight-bold: 900;
+    --font-weight-medium: 700;
+
+    /* ── Font Sizes ── */
+    --fs-xs: 0.8rem;
+    --fs-sm: 0.9rem;
+    --fs-base: 1rem;
+    --fs-md: 1.05rem;
+    --fs-lg: 1.3rem;
+    --fs-xl: 1.8rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 2.5rem;
+
+    /* ── Border Image System ── */
+    --border-image-src: url('/images/element-section-border.png');
+    --border-mode: stretch;
+
+    /*
+     * border-image-slice (per-side: top right bottom left)
+     * Controls how many pixels inward from each edge of the source image
+     * are used for the border. Higher = more of the image used for that edge.
+     * These are unitless pixel values from the source image.
+     */
+    --border-slice-top: 80;
+    --border-slice-right: 80;
+    --border-slice-bottom: 100;
+    --border-slice-left: 80;
+    --border-slice: var(--border-slice-top) var(--border-slice-right) var(--border-slice-bottom) var(--border-slice-left);
+
+    /*
+     * border-image-outset (per-side: top right bottom left)
+     * Pushes the border OUTSIDE the element box.
+     * Positive values = border extends outward, content area stays full size.
+     * Set to 0 = border is inside the element box (eats into content space).
+     */
+    --border-outset-top: 0;
+    --border-outset-right: 0;
+    --border-outset-bottom: 0;
+    --border-outset-left: 0;
+    --border-outset: var(--border-outset-top) var(--border-outset-right) var(--border-outset-bottom) var(--border-outset-left);
+
+    /* ── Border Thickness (per-side: top right bottom left) ── */
+
+    /* Panels — Cards, large containers */
+    --border-panel-top: 28px;
+    --border-panel-right: 36px;
+    --border-panel-bottom: 28px;
+    --border-panel-left: 36px;
+    --border-panel: var(--border-panel-top) var(--border-panel-right) var(--border-panel-bottom) var(--border-panel-left);
+
+    /* Buttons — Buttons, IP bar */
+    --border-button-top: 14px;
+    --border-button-right: 18px;
+    --border-button-bottom: 18px;
+    --border-button-left: 18px;
+    --border-button: var(--border-button-top) var(--border-button-right) var(--border-button-bottom) var(--border-button-left);
+
+    /* Small — Social links, tags */
+    --border-small-top: 10px;
+    --border-small-right: 10px;
+    --border-small-bottom: 10px;
+    --border-small-left: 10px;
+    --border-small: var(--border-small-top) var(--border-small-right) var(--border-small-bottom) var(--border-small-left);
+
+    /* ── Background Textures ── */
+    --texture-rust: url('/images/rust material.png');
+    --texture-button: url('/images/button-bg.png');
+    --texture-hero: url('/images/hero-section.png');
+
+    /* Scaling and tiling for textures */
+    --texture-size-rust: 600px auto;
+    --texture-repeat-rust: repeat;
+    --texture-position-rust: center;
+
+    /* ── Shadows ── */
+    --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.6);
+    --shadow-hover: 0 0 25px rgba(255, 60, 0, 0.2);
+    --shadow-lava: 0 0 20px rgba(255, 60, 0, 0.4);
+
+    /* ── Transitions ── */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.2s;
+    --transition-slow: 0.3s;
+}

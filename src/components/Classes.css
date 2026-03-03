@@ -1,0 +1,96 @@
+.classes-section {
+    background: var(--bg-abyss);
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.class-card {
+    overflow: hidden;
+    transition: all var(--transition-slow);
+    cursor: pointer;
+}
+
+
+/* removed image hover scale */
+
+/* removed hover overlay */
+
+.class-img-wrap {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.class-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.class-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(transparent, rgba(139, 30, 0, 0.4));
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+}
+
+.class-info {
+    padding: 16px 16px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.class-name {
+    font-size: var(--fs-md);
+}
+
+.class-subtitle {
+    font-size: var(--fs-sm);
+    color: var(--red-glow);
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.4), 2px 2px 4px #000;
+}
+
+.class-desc {
+    font-size: var(--fs-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.class-btn {
+    font-size: var(--fs-sm);
+    padding: 12px 24px;
+    margin-top: 6px;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .classes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .classes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-img-wrap {
+        height: 280px;
+    }
+}

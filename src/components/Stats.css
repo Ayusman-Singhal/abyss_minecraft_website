@@ -1,0 +1,54 @@
+.stats-section {
+    background: var(--bg-abyss);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 28px 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all var(--transition-slow);
+}
+
+.stat-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-icon {
+    font-size: 2.2rem;
+}
+
+.stat-value {
+    font-size: 2.2rem;
+}
+
+.stat-label {
+    font-size: var(--fs-md);
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-value {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
