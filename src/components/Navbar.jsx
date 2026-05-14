@@ -32,9 +32,10 @@ export default function Navbar() {
             </Link>
           ))}
           <img
-            src="/images/login.png"
+            src="/images/login.webp"
             alt="Login"
             className="nav-login-img"
+            decoding="async"
             onClick={() => { }}
           />
         </div>

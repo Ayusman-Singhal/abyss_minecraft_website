@@ -1,8 +1,8 @@
 import './Classes.css';
-import char01 from '../assets/character01.png';
-import char02 from '../assets/character02.png';
-import char03 from '../assets/character03.png';
-import char04 from '../assets/character04.png';
+import char01 from '../assets/character01.webp';
+import char02 from '../assets/character02.webp';
+import char03 from '../assets/character03.webp';
+import char04 from '../assets/character04.webp';
 
 const classes = [
     {
@@ -44,7 +44,7 @@ export default function Classes() {
                     {classes.map((c) => (
                         <div key={c.name} className="class-card stone-panel">
                             <div className="class-img-wrap">
-                                <img src={c.img} alt={c.name} className="class-img" />
+                                <img src={c.img} alt={c.name} className="class-img" loading="lazy" decoding="async" />
                                 <div className="class-img-overlay" />
                             </div>
                             <div className="class-info">

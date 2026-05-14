@@ -14,7 +14,7 @@ export default function Footer() {
                         </p>
                         <div className="footer-socials">
                             <a href="https://discord.com/invite/fakepixel" className="social-link" aria-label="Discord" target="_blank" rel="noopener noreferrer">
-                                <img src="/images/discord.png" alt="Discord" className="social-icon-img" />
+                                <img src="/images/discord.webp" alt="Discord" className="social-icon-img" loading="lazy" decoding="async" />
                             </a>
                             <a href="#" className="social-link" aria-label="Twitter">@</a>
                             <a href="#" className="social-link" aria-label="YouTube">▶</a>

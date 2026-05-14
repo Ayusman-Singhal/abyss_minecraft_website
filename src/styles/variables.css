@@ -54,7 +54,7 @@
     --fs-3xl: 2.5rem;
 
     /* ── Border Image System ── */
-    --border-image-src: url('/images/element-section-border.png');
+    --border-image-src: url('/images/element-section-border.webp');
     --border-mode: stretch;
 
     /*
@@ -105,9 +105,9 @@
     --border-small: var(--border-small-top) var(--border-small-right) var(--border-small-bottom) var(--border-small-left);
 
     /* ── Background Textures ── */
-    --texture-rust: url('/images/rust material.png');
-    --texture-button: url('/images/button-bg.png');
-    --texture-hero: url('/images/hero-section.png');
+    --texture-rust: url('/images/rust-material.webp');
+    --texture-button: url('/images/button-bg.webp');
+    --texture-hero: url('/images/hero-section.webp');
 
     /* Scaling and tiling for textures */
     --texture-size-rust: 600px auto;

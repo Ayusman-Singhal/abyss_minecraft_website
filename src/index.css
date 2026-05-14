@@ -110,7 +110,7 @@ body {
 
 /* Play Now button — uses playnow.png (text baked in) */
 .mc-button-play {
-  background: url('/images/playnow.png') center / 100% 100% no-repeat;
+  background: url('/images/playnow.webp') center / 100% 100% no-repeat;
   border: none;
   border-image: none;
   padding: 30px 120px;
