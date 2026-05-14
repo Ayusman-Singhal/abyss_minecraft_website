@@ -9,7 +9,7 @@ const classes = [
         id: 'knight',
         name: 'Abyss Knight',
         subtitle: 'The Unyielding Shield',
-        image: '/images/character01.png',
+        image: '/images/character01.webp',
         color: '#55aaff',
         lore: 'Forged in the deepest trenches of the Abyss, these warriors have traded their humanity for impenetrable defenses. Their armor, fused with corrupted bedrock, absorbs the darkness itself. Legends say the first Abyss Knight was a fallen paladin who descended into the void seeking redemption — and found only power.',
         abilities: [
@@ -24,7 +24,7 @@ const classes = [
         id: 'reaper',
         name: 'Blood Reaper',
         subtitle: 'The Crimson Harvest',
-        image: '/images/character02.png',
+        image: '/images/character02.webp',
         color: '#ff2a2a',
         lore: 'Blood Reapers are cursed warriors who draw power from the blood of their fallen enemies. Each kill feeds their growing hunger, making them more dangerous as the battle rages on. They move through shadows, striking with scythes forged from crystallized blood. Their initiation rite requires draining the life force of 100 hostile mobs in a single night.',
         abilities: [
@@ -39,7 +39,7 @@ const classes = [
         id: 'berserker',
         name: 'Shadow Berserker',
         subtitle: 'The Void Breaker',
-        image: '/images/character03.png',
+        image: '/images/character03.webp',
         color: '#cc88ff',
         lore: 'Shadow Berserkers exist between dimensions, their bodies partially merged with the void. They channel raw chaos energy through their weapons, delivering devastating attacks that tear through both armor and enchantments. Their rage is endless, their destruction absolute. The transformation is irreversible — once you embrace the shadow, the shadow embraces you back.',
         abilities: [
@@ -54,7 +54,7 @@ const classes = [
         id: 'guardian',
         name: 'Infernal Guardian',
         subtitle: 'The Ember Warden',
-        image: '/images/character04.png',
+        image: '/images/character04.webp',
         color: '#ff8800',
         lore: 'Infernal Guardians are ancient protectors bound to the Nether\'s eternal flames. They wield fire as both weapon and armor, surrounding themselves in walls of magma that scorch any who dare approach. Unlike other classes, Guardians grow stronger in heated environments. Standing in lava fully heals them, and fire-based attacks are absorbed as energy.',
         abilities: [
@@ -115,6 +115,8 @@ export default function Wiki() {
                                     src={cls.image}
                                     alt={cls.name}
                                     className="class-select-img"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                                 <span className="class-select-name mc-font">{cls.name}</span>
                             </button>
@@ -130,6 +132,8 @@ export default function Wiki() {
                                     src={selectedClass.image}
                                     alt={selectedClass.name}
                                     className="class-detail-img"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                             </div>
 

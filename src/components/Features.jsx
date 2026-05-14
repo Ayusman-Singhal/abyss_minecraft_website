@@ -2,19 +2,19 @@ import './Features.css';
 
 const features = [
     {
-        icon: '/images/Survival.png',
+        icon: '/images/Survival.webp',
         title: 'SURVIVAL',
         subtitle: 'Hardcore Difficulty',
         desc: 'Custom biomes, perma-death elements, and a dynamic resource economy designed for the elite survivors.',
     },
     {
-        icon: '/images/Dungeons.png',
+        icon: '/images/Dungeons.webp',
         title: 'DUNGEONS',
         subtitle: 'Epic Loot Drops',
         desc: 'Multi-level raids featuring complex boss mechanics. Face the horrors of the Deep Void and claim your rewards.',
     },
     {
-        icon: '/images/Events.png',
+        icon: '/images/Events.webp',
         title: 'EVENTS',
         subtitle: 'Blood Moon Cycles',
         desc: 'Global world boss encounters that require server-wide cooperation to survive the encroaching darkness.',
@@ -35,7 +35,7 @@ export default function Features() {
                     {features.map((f) => (
                         <div key={f.title} className="stone-panel feature-card">
                             <div className="feature-card-content">
-                                <img src={f.icon} alt={f.title} className="feature-icon-img" />
+                                <img src={f.icon} alt={f.title} className="feature-icon-img" loading="lazy" decoding="async" />
                                 <h3 className="mc-font mc-gold feature-title">{f.title}</h3>
                                 <span className="feature-subtitle cinzel">{f.subtitle}</span>
                                 <p className="feature-desc">{f.desc}</p>

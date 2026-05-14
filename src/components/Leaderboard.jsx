@@ -17,7 +17,7 @@ export default function Leaderboard() {
                     {/* Discord CTA */}
                     <div className="discord-panel stone-panel">
                         <div className="discord-content">
-                            <img src="/images/discord.png" alt="Discord" className="discord-icon-img" />
+                            <img src="/images/discord.webp" alt="Discord" className="discord-icon-img" loading="lazy" decoding="async" />
                             <h3 className="cinzel mc-gold discord-heading">Join The</h3>
                             <h2 className="mc-font discord-title">DARK LEGION</h2>
                             <p className="discord-desc cinzel">
@@ -45,6 +45,8 @@ export default function Leaderboard() {
                                         src={`https://mc-heads.net/avatar/${p.skin}/40`}
                                         alt={p.name}
                                         className="lb-avatar"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                     <div className="lb-info">
                                         <span className="lb-name cinzel">{p.name}</span>
