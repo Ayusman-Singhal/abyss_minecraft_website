@@ -35,6 +35,7 @@ export default function Navbar() {
             src="/images/login.webp"
             alt="Login"
             className="nav-login-img"
+            fetchpriority="high"
             decoding="async"
             onClick={() => { }}
           />
